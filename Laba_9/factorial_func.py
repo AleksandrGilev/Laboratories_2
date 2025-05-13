@@ -5,6 +5,11 @@ def factorial(n):
         return n * factorial(n - 1)
 
 
-# n = int(input("Введите целое неотрицательное число для вычисления факториала: "))
-# result = factorial(n)
-# print(f"Факториал числа {n} равен {result}")
+def main():
+    n = int(input("Введите целое неотрицательное число для вычисления факториала: "))
+    result = factorial(n)
+    print(f"Факториал числа {n} равен {result}")
+
+
+if __name__ == "__main__":
+    main()

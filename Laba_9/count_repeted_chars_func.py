@@ -9,5 +9,10 @@ def count_repeted_chars(text):
     return reapeted_chars
 
 
-# user_input = input("Введите слово: ")
-# print(f"Количество повторяющихся букв в слове {user_input}: {count_repeted_chars(user_input)}")
+def main():
+    user_input = input("Введите слово: ")
+    print(f"Количество повторяющихся букв в слове {user_input}: {count_repeted_chars(user_input)}")
+
+
+if __name__ == "__main__":
+    main()

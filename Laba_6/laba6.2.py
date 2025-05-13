@@ -1,6 +1,12 @@
 import numpy as np
 
-N = int(input("Введите размер матрицы N: "))
+while True:
+    try:
+        N = int(input("Введите размер матрицы N: "))
+    except ValueError:
+        print("Введено неверное значение!")
+        continue
+    break
 
 A = np.random.randint(1, 101, size=(N, N))
 

@@ -6,6 +6,12 @@ def palindrome(text):
 
     return cleaned_text == cleaned_text[::-1]
 
-# user_input = input("Введите првоеряемое слово: ")
-# result = palindrome(user_input)
-# print(f"{user_input} это {result}")
+
+def main():
+    user_input = input("Введите првоеряемое слово: ")
+    result = palindrome(user_input)
+    print(f"{user_input} это {result}")
+
+
+if __name__ == "__main__":
+    main()

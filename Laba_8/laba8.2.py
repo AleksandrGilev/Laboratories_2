@@ -1,14 +1,15 @@
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+
 while True:
     try:
         file_path = 'udemy_courses_extended.csv'
         data = pd.read_csv(file_path)
-        break
     except FileNotFoundError:
         print(f"Файл {file_path} не найден.")
         continue
+    break
 
 paid_courses = data[data['is_paid'] == True]
 free_courses = data[data['is_paid'] == False]
@@ -29,14 +30,13 @@ fig_count.update_layout(
     height=600,
     width=800
 )
-fig_count.write_image('courses_count.png')
 fig_count.show()
 
 # b. Максимальное, среднее и минимальное количество подписчиков
 fig_sub = make_subplots(
     rows=1, cols=3,
-    subplot_titles=('Максимальное количество подписчиков', 
-                    'Среднее количество подписчиков', 
+    subplot_titles=('Максимальное количество подписчиков',
+                    'Среднее количество подписчиков',
                     'Минимальное количество подписчиков')
 )
 
@@ -86,7 +86,6 @@ fig_sub.update_layout(
     showlegend=False,
     template='plotly_white'
 )
-fig_sub.write_image('subscribers_stats.png')
 fig_sub.show()
 
 # c. Количество курсов для каждого уровня
@@ -121,7 +120,6 @@ fig_levels.update_layout(
     height=600,
     width=1000
 )
-fig_levels.write_image('courses_by_level.png')
 fig_levels.show()
 
-print("Анализ завершен. Результаты сохранены в виде изображений.")
+print("Анализ завершен. Диаграммы выведены на экран.")
